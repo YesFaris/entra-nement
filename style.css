@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+max-width: 100%;
+margin-inline: auto ;
+font-family: sans-serif;
+
+}
+.container{
+    max-width: 50%;
+}
+header{
+    background-color: skyblue;
+    padding: 2rem;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.navigation ul {
+    display: flex;
+    list-style: none;
+  justify-content: flex-end;
+}
+.navigation li{
+    margin-right: 2rem;
+}
+.navigation a {
+    text-decoration: none;
+}
+.blockSun{
+    position: relative;
+    display: flex;
+    border : 1px solid skyblue;
+    border-radius: 100px;
+    background-color: skyblue;
+    padding: 2rem;
+    margin: 10rem;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 5px 1px 5px;
+    box-shadow: 5px 1px 5px rgb(0, 0, 0, 0.6);
+  
+ 
+}
+.blockSun:hover{
+    animation: back 2s;
+}
+.sun{
+    
+    border: 1px solid yellow;
+    border-radius: 100%;
+    background-color: yellow;
+    padding: 3.5rem;
+    cursor: pointer;
+    transition: all 2s;
+    overflow: hidden;
+
+}
+.sun:hover{
+    transform: translateX(500px);
+    animation: actions 2s ;
+}
+@keyframes mouvement {
+from   { transform: translateY(6px);
+}
+to  {transform: translateY(-6px) ;
+}
+}
+@keyframes back {
+    from   { background-color: skyblue;
+    }
+    to  { background-color: rgb(36, 36, 36);
+    }
+}
+@keyframes actions {
+    from   { background-color: yellow; 
+    }
+    to  { background-color: grey; border-color: gray;
+    }
+}
+.nuage_1{
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3.5rem;
+    right: -10px;
+    bottom: -1px;
+    animation: mouvement 2s infinite alternate-reverse;
+  
+
+}
+
+.nuage_2{
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3.5rem;
+    position: absolute;
+    right: 55px;
+    top: -50px;
+    animation: mouvement 1.75s infinite alternate-reverse;
+}
+.nuage_3{
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3.5rem;
+    position: absolute;
+    right: 65px;
+    bottom: -60px;
+    animation: mouvement 1.5s infinite alternate-reverse;
+}
+.nuage_4{
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3.5rem;
+    position: absolute;
+    right: -50px;
+    top: -20px;
+    animation: mouvement 1.25s infinite alternate-reverse;
+}
+.nuage_5{
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3.5rem;
+    position: absolute;
+    right: 175px;
+    bottom: -60px;
+    animation: mouvement  1s infinite alternate-reverse;
+}
+.blockMoon{
+    position: relative;
+    display: flex;
+    border : 1px solid black;
+    border-radius: 100px;
+    background-color: rgb(36, 36, 36);
+    padding: 2rem;
+    margin: 10rem;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 5px 1px 5px rgb(0, 0, 0, 0.6);
+}
+.moon{
+border: 1px solid grey;
+    border-radius: 100%;
+    background-color: grey;
+    padding: 3.5rem;
+    cursor: pointer;
+    transition: all 2s;
+    overflow: hidden;
+}
+.moon:hover{
+    transform: translateX(500px);
+}
